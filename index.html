@@ -205,14 +205,25 @@
       <div class="download-inner">
         <div class="download-text">
           <p class="kicker">Get the app</p>
-          <h2>Download +one for Android.</h2>
-          <p class="lede">Grab the APK, install it, and start sending ink that actually arrives.</p>
-          <a class="btn btn-ink download-btn" href="https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk" download target="_blank" rel="noopener">↓&ensp;Download APK</a>
-          <p class="fine">plusone.apk · Android · via GitHub Releases</p>
+          <h2>Download +one.</h2>
+          <p class="lede">Pick your platform, or jump straight into the web app — same ink, same paper, same people.</p>
+          <div class="download-cards">
+            <div class="dl-card">
+              <span class="dl-platform">Android</span>
+              <a class="btn btn-ink download-btn" href="https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk" download target="_blank" rel="noopener">↓&ensp;Download APK</a>
+              <p class="fine">plusone.apk · via GitHub Releases</p>
+            </div>
+            <div class="dl-card">
+              <span class="dl-platform">iOS</span>
+              <span class="dl-soon">Coming Soon</span>
+              <a class="btn btn-ghost download-btn" href="https://plusoneeeee.vercel.app/" target="_blank" rel="noopener">Try on Web →</a>
+              <p class="fine">Safari · Add to Home Screen</p>
+            </div>
+          </div>
         </div>
         <div class="download-qr">
           <canvas id="qr-canvas" width="200" height="200"></canvas>
-          <p class="fine qr-label">Scan to download</p>
+          <p class="fine qr-label">Scan to try +one</p>
         </div>
       </div>
     </section>
@@ -261,9 +272,9 @@
       });
     });
 
-    /* QR code for Android APK download */
+    /* QR code for +one web app */
     (function () {
-      var url = "https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk";
+      var url = "https://plusoneeeee.vercel.app/";
       var qr = qrcode(0, "M");
       qr.addData(url);
       qr.make();
