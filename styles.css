@@ -398,14 +398,18 @@ body.dark .dl-card:hover {
 }
 
 .dl-platform {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: -0.02em;
-  margin-bottom: 0.8rem;
+  margin: 0 auto 0.8rem;
   color: var(--pulp);
 }
+.dl-platform svg { display: block; }
 
 /* "Coming Soon" badge — ink background, pulp text (no yellow) */
 .dl-soon {
@@ -766,15 +770,17 @@ body.dark .ai .kicker, body.dark .ai p { color: #d9c9a8; }
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: rgba(243, 234, 216, 0.85);
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    background: rgba(243, 234, 216, 0.92);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 2px solid var(--ink);
     padding: 0.4rem 0 1rem;
     transition: background 0.4s;
   }
   body.dark .nav #site-nav {
-    background: rgba(26, 25, 22, 0.85);
+    background: rgba(26, 25, 22, 0.92);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
   }
   body.nav-open .nav #site-nav { display: flex; }
   .nav #site-nav > a {
