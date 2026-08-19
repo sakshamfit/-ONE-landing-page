@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>+one — an ink-and-paper messenger</title>
-  <meta name="description" content="+one is a real-time messenger and network: chats, stories, colleagues, polls, and a daily AI greeting. Built for iOS, Android, and web." />
+  <meta name="description" content="+one is a real-time messenger and network: chats, stories, colleagues, polls, calls, and a daily AI greeting. iOS, Android, and web." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23f4ead8' width='32' height='32'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='18' font-family='Georgia' fill='%231a1a1a'%3E+%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,86 +15,60 @@
   <div class="paper" aria-hidden="true"></div>
 
   <header class="nav">
-    <a class="mark" href="#top">
-      <span class="mark-plus">+</span>one
-    </a>
-    <nav>
+    <a class="mark" href="#top"><span class="mark-plus">+</span>one</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav">
+      <a href="#shots">App</a>
       <a href="#features">Features</a>
       <a href="#network">Network</a>
+      <a href="#more">More</a>
       <a href="#design">Design</a>
+      <a class="btn btn-ink nav-cta" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Open the app</a>
     </nav>
-    <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Open the app</a>
   </header>
 
   <main id="top">
     <section class="hero">
-      <p class="kicker">v1.2 · realtime · iOS / Android / web</p>
-      <h1>Find the <em>+ones</em><br />worth talking to.</h1>
-      <p class="lede">
-        An ink-and-paper messenger with live chats, a worldwide feed,
-        place-based colleagues, stories, polls, and a daily AI greeting.
-        No plastic glass UI — just graphite, pulp, and people.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Launch +one</a>
-        <a class="btn btn-ghost" href="https://github.com/sakshamfit/BROSKIE" target="_blank" rel="noopener">Source on GitHub</a>
+      <div class="hero-copy">
+        <p class="kicker">v1.2 · realtime · iOS / Android / web</p>
+        <h1>Find the <em>+ones</em> worth talking to.</h1>
+        <p class="lede">
+          An ink-and-paper messenger: live chats, a worldwide feed, place-based colleagues,
+          stories, polls, WebRTC calls, and a daily AI greeting. Graphite, pulp, people.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Launch +one</a>
+          <a class="btn btn-ghost" href="https://github.com/sakshamfit/BROSKIE" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+        <p class="fine">broskie-h.up.railway.app · Expo · Node · Socket.IO</p>
       </div>
-      <p class="fine">Production at broskie-h.up.railway.app · Expo + Node + Socket.IO</p>
+      <div class="hero-shot">
+        <img src="images/screen-chats.png" alt="Chats list in +one with paper graph background" width="720" height="1280" />
+      </div>
+    </section>
 
-      <div class="phones">
-        <article class="device">
-          <header class="device-bar">
-            <span>Chats</span>
-            <span class="dot"></span>
-          </header>
-          <ul class="chat-list">
-            <li>
-              <div class="av av-y">S</div>
-              <div>
-                <strong>studio desk</strong>
-                <p>the poll just flipped — 4 to 3</p>
-              </div>
-              <time>now</time>
-            </li>
-            <li>
-              <div class="av av-c">A</div>
-              <div>
-                <strong>anika</strong>
-                <p>typing…</p>
-              </div>
-              <time>2m</time>
-            </li>
-            <li>
-              <div class="av av-i">+</div>
-              <div>
-                <strong>the network</strong>
-                <p>#campus · new photo post</p>
-              </div>
-              <time>11m</time>
-            </li>
-            <li>
-              <div class="av av-k">M</div>
-              <div>
-                <strong>maya</strong>
-                <p>✓✓ let’s find the +ones</p>
-              </div>
-              <time>1h</time>
-            </li>
-          </ul>
-        </article>
-
-        <article class="device device-shift">
-          <header class="device-bar">
-            <span>anika</span>
-            <span class="ticks">✓✓</span>
-          </header>
-          <div class="bubbles">
-            <p class="b them">did you see the weather greeting this morning</p>
-            <p class="b me">the character said it was 24° and I had 3 requests</p>
-            <p class="b them">okay that’s actually charming</p>
-            <p class="b me highlight">Let’s find the +ones.</p>
-          </div>
-        </article>
+    <section class="shots" id="shots">
+      <p class="kicker">Inside the notebook</p>
+      <h2>The app, not a mock brand deck.</h2>
+      <div class="shot-row">
+        <figure>
+          <img src="images/screen-chat.png" alt="Conversation with highlighter yellow last message" width="720" height="1280" />
+          <figcaption>1:1 chat · ticks · replies</figcaption>
+        </figure>
+        <figure>
+          <img src="images/screen-network.png" alt="The Network feed with a campus post" width="720" height="1280" />
+          <figcaption>The Network · tags</figcaption>
+        </figure>
+        <figure>
+          <img src="images/screen-call.png" alt="Incoming voice call screen" width="720" height="1280" />
+          <figcaption>Calls · ring &amp; history</figcaption>
+        </figure>
+        <figure>
+          <img src="images/screen-status.png" alt="Status story on mustard paper" width="720" height="1280" />
+          <figcaption>Status · 24h ink</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -109,7 +83,7 @@
         <article>
           <span class="tag">02</span>
           <h3>1:1 + groups</h3>
-          <p>Replies, reactions, edits, forwards, voice notes, images, disappearing timers, and delete-for-everyone.</p>
+          <p>Replies, reactions, edits, forwards, voice notes with waveforms, images with lightbox, and delete-for-everyone.</p>
         </article>
         <article>
           <span class="tag">03</span>
@@ -118,18 +92,33 @@
         </article>
         <article>
           <span class="tag">04</span>
+          <h3>Disappearing ink</h3>
+          <p>Chat-wide or per-message timers: 30s, 5m, 1h, 24h. Expired messages are hard-deleted and vanish on every device.</p>
+        </article>
+        <article>
+          <span class="tag">05</span>
           <h3>Polls &amp; admin</h3>
           <p>Group polls with live bars. Admins rename, promote, and remove — the last admin never vanishes.</p>
         </article>
         <article>
-          <span class="tag">05</span>
+          <span class="tag">06</span>
+          <h3>Voice &amp; video</h3>
+          <p>WebRTC on the web: ring, accept, mute, hang up. Call history everywhere. Dedicated Calls tab to call back.</p>
+        </article>
+        <article>
+          <span class="tag">07</span>
+          <h3>Star, pin, search</h3>
+          <p>Pin chats to the top. Star any message. Global search plus in-chat search that jumps to the match. Archive and mute.</p>
+        </article>
+        <article>
+          <span class="tag">08</span>
           <h3>Stories</h3>
           <p>Coloured text statuses, 24-hour expiry, viewed rings, tap-through progress. Paper, then gone.</p>
         </article>
         <article>
-          <span class="tag">06</span>
-          <h3>Voice &amp; video</h3>
-          <p>WebRTC calls on the web with ringing, mute, history. Native rings and history everywhere.</p>
+          <span class="tag">09</span>
+          <h3>One ID</h3>
+          <p>Username + password, JWT sessions, auto-login, editable about. Password-confirmed permanent deletion with safe cleanup.</p>
         </article>
       </div>
     </section>
@@ -137,34 +126,84 @@
     <section class="split" id="network">
       <div>
         <p class="kicker">The Network</p>
-        <h2>A public worldwide feed that still feels handwritten.</h2>
+        <h2>A worldwide feed that still feels handwritten.</h2>
         <p>Post text, a cropped photo, and a tag. Likes and threaded comments land live. Filter by trending tags. Delete your own ink.</p>
         <ul class="checks">
           <li>Original, 1:1, 4:5, 16:9, 9:16 framing</li>
           <li>Colleagues by college, org, or workplace</li>
           <li>Accepted colleagues open a chat immediately</li>
+          <li>Cursor pagination, author delete, live join updates</li>
         </ul>
       </div>
-      <aside class="card-feed">
-        <div class="tape">#campus</div>
-        <p class="feed-body">first week back. the courtyard still smells like rain and cheap coffee.</p>
-        <footer>
-          <span>♥ 48</span>
-          <span>12 comments</span>
-        </footer>
-      </aside>
+      <img class="split-img" src="images/screen-network.png" alt="Network feed screenshot" width="720" height="1280" />
     </section>
 
-    <section class="ai">
+    <section class="ai" id="ai">
       <p class="kicker">Once a day</p>
       <h2>A greeting that knows your name and the weather.</h2>
-      <p>After sign-in, a GLB character speaks — first name, real Open-Meteo conditions, request counts — then signs off with “Let’s find the +ones.”</p>
+      <p>After sign-in, a GLB character speaks — first name, real Open-Meteo conditions, unread and request counts — then signs off with “Let’s find the +ones.”</p>
+    </section>
+
+    <section class="strip" id="more">
+      <p class="kicker">And the rest of the notebook</p>
+      <h2>More of what shipped.</h2>
+      <div class="grid">
+        <article>
+          <span class="tag">10</span>
+          <h3>100% SVG icons &amp; emoji</h3>
+          <p>Ionicons vectors and 1445 Twemoji. Same glyphs on iOS, Android, and web — no system emoji lottery.</p>
+        </article>
+        <article>
+          <span class="tag">11</span>
+          <h3>Installable PWA</h3>
+          <p>Add to home screen, standalone chrome, paper theme-color, notch-safe padding. Median Android status bar match.</p>
+        </article>
+        <article>
+          <span class="tag">12</span>
+          <h3>Four appearances</h3>
+          <p>Light, dark, system, and Kinetic Ink — high-contrast manga-tech with cyan actions and red alerts.</p>
+        </article>
+        <article>
+          <span class="tag">13</span>
+          <h3>Voice notes</h3>
+          <p>Real WebM / M4A recording with permission, upload, and a playable waveform bubble with duration.</p>
+        </article>
+        <article>
+          <span class="tag">14</span>
+          <h3>Privacy controls</h3>
+          <p>Block, mute, request inbox, status privacy, and a danger-zone Delete One ID that transfers shared groups first.</p>
+        </article>
+        <article>
+          <span class="tag">15</span>
+          <h3>Durable backend</h3>
+          <p>SQLite on a persistent volume, automatic backups every 6 hours and before shutdown. Only real sign-ups — no fake seed data.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="platforms">
+      <p class="kicker">Where it runs</p>
+      <h2>One codebase. Three surfaces.</h2>
+      <div class="plat-grid">
+        <article>
+          <h3>Web</h3>
+          <p>Full PWA with live WebRTC media. Open it in two tabs and watch ticks go blue.</p>
+        </article>
+        <article>
+          <h3>Android</h3>
+          <p>Expo Go in a minute, or a side-loaded APK from EAS. Same paper UI.</p>
+        </article>
+        <article>
+          <h3>iOS</h3>
+          <p>Expo Go now, TestFlight when you want a standalone build.</p>
+        </article>
+      </div>
     </section>
 
     <section class="design" id="design">
       <p class="kicker">Graphite &amp; Pulp</p>
       <h2>No shadows. No blur. Depth from stroke.</h2>
-      <p>Hairline graphite → 2px ink → 3px bold. Underline inputs, dashed rules, masking-tape chips, highlighter yellow used like a real marker. Bricolage Grotesque / Karla / JetBrains Mono. Light, dark, system, and Kinetic Ink.</p>
+      <p>Hairline graphite → 2px ink → 3px bold. Underline inputs, dashed rules, masking-tape chips, highlighter yellow used like a real marker. Bricolage Grotesque / Karla / JetBrains Mono.</p>
       <div class="swatches">
         <span class="sw paper-s">pulp</span>
         <span class="sw ink-s">ink</span>
@@ -185,8 +224,24 @@
 
   <footer class="foot">
     <span>+one</span>
-    <span>Not affiliated with WhatsApp. Built as an original messenger.</span>
+    <span>Not affiliated with WhatsApp. Original messenger.</span>
     <a href="https://github.com/sakshamfit/BROSKIE">sakshamfit/BROSKIE</a>
   </footer>
+
+  <script>
+    const btn = document.querySelector(".menu-btn");
+    const nav = document.getElementById("site-nav");
+    btn.addEventListener("click", () => {
+      const open = document.body.classList.toggle("nav-open");
+      btn.setAttribute("aria-expanded", open);
+      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
+    nav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        document.body.classList.remove("nav-open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
 </body>
 </html>
