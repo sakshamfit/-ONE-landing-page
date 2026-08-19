@@ -24,6 +24,7 @@
       <a href="#features">Features</a>
       <a href="#network">Network</a>
       <a href="#more">More</a>
+      <a href="#download">Download</a>
       <a href="#design">Design</a>
       <a class="btn btn-ink nav-cta" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Open the app</a>
     </nav>
@@ -200,6 +201,22 @@
       </div>
     </section>
 
+    <section class="download" id="download">
+      <div class="download-inner">
+        <div class="download-text">
+          <p class="kicker">Get the app</p>
+          <h2>Download +one for Android.</h2>
+          <p class="lede">Grab the APK, install it, and start sending ink that actually arrives.</p>
+          <a class="btn btn-ink download-btn" href="https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk" download target="_blank" rel="noopener">↓&ensp;Download APK</a>
+          <p class="fine">plusone.apk · Android · via GitHub Releases</p>
+        </div>
+        <div class="download-qr">
+          <canvas id="qr-canvas" width="200" height="200"></canvas>
+          <p class="fine qr-label">Scan to download</p>
+        </div>
+      </div>
+    </section>
+
     <section class="design" id="design">
       <p class="kicker">Graphite &amp; Pulp</p>
       <h2>No shadows. No blur. Depth from stroke.</h2>
@@ -228,6 +245,7 @@
     <a href="https://github.com/sakshamfit/BROSKIE">sakshamfit/BROSKIE</a>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
   <script>
     const btn = document.querySelector(".menu-btn");
     const nav = document.getElementById("site-nav");
@@ -242,6 +260,29 @@
         btn.setAttribute("aria-expanded", "false");
       });
     });
+
+    /* QR code for Android APK download */
+    (function () {
+      var url = "https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk";
+      var qr = qrcode(0, "M");
+      qr.addData(url);
+      qr.make();
+      var canvas = document.getElementById("qr-canvas");
+      if (!canvas) return;
+      var ctx = canvas.getContext("2d");
+      var size = qr.getModuleCount();
+      var cellSize = 200 / size;
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, 200, 200);
+      ctx.fillStyle = "#1c1914";
+      for (var r = 0; r < size; r++) {
+        for (var c = 0; c < size; c++) {
+          if (qr.isDark(r, c)) {
+            ctx.fillRect(c * cellSize, r * cellSize, cellSize + 0.5, cellSize + 0.5);
+          }
+        }
+      }
+    })();
   </script>
 </body>
 </html>
