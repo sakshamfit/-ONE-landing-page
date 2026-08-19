@@ -376,25 +376,24 @@ body.dark .dl-banner {
   margin-top: 1.6rem;
 }
 
+/* ── Base card — theme-adaptive ── */
 .dl-card {
-  border: 2px solid #d9c9a8;
+  border: 2px solid var(--ink);
   padding: 1.5rem 1rem 1.3rem;
   text-align: center;
-  background: rgba(217, 201, 168, 0.06);
+  background: #ffffff;
   transition: border-color 0.3s, background 0.3s, transform 0.25s;
 }
 .dl-card:hover {
-  border-color: var(--pulp);
-  background: rgba(243, 234, 216, 0.1);
   transform: translateY(-3px);
+  border-color: var(--graphite);
 }
 body.dark .dl-card {
-  border-color: #b8a987;
-  background: rgba(217, 201, 168, 0.04);
+  background: #2c2925;
+  border-color: rgba(255,255,255,0.25);
 }
 body.dark .dl-card:hover {
-  border-color: var(--pulp);
-  background: rgba(243, 234, 216, 0.06);
+  border-color: rgba(255,255,255,0.6);
 }
 
 .dl-platform {
@@ -407,26 +406,12 @@ body.dark .dl-card:hover {
   font-size: 1.2rem;
   letter-spacing: -0.02em;
   margin: 0 auto 0.8rem;
-  color: var(--pulp);
+  color: var(--ink);
 }
+body.dark .dl-platform { color: #ffffff; }
 .dl-platform svg { display: block; }
 
-/* "Coming Soon" badge — ink background, pulp text (no yellow) */
-.dl-soon {
-  display: inline-block;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background: var(--pulp);
-  color: var(--ink);
-  padding: 0.25rem 0.6rem;
-  border: 2px solid var(--pulp);
-  margin-bottom: 0.9rem;
-  font-weight: 700;
-}
-
-/* Download buttons — ink style (no yellow) */
+/* Button on white card (light mode) → ink bg + white text */
 .dl-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -434,81 +419,64 @@ body.dark .dl-card:hover {
   font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-decoration: none;
-  background: var(--pulp);
-  color: var(--ink);
-  border: 2px solid var(--pulp);
+  background: var(--ink);
+  color: var(--pulp);
+  border: 2px solid var(--ink);
   font-weight: 600;
-  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 .dl-btn:hover {
-  background: transparent;
+  background: #000;
   color: var(--pulp);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(243, 234, 216, 0.15);
+}
+body.dark .dl-btn {
+  background: #ffffff;
+  color: var(--ink);
+  border-color: #ffffff;
+}
+body.dark .dl-btn:hover {
+  background: transparent;
+  color: #ffffff;
 }
 .dl-btn:active { transform: translateY(0); }
 
-/* Ghost variant — solid pulp border (no yellow) */
-.dl-btn-ghost {
-  background: transparent;
-  color: var(--pulp);
-  border: 2px solid var(--pulp);
-}
-.dl-btn-ghost:hover {
-  background: var(--pulp);
-  color: var(--ink);
-  border-color: var(--pulp);
-}
-
-.dl-card-qr {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.dl-card-qr canvas {
-  border: 3px solid var(--pulp);
-  background: #fff;
-  display: block;
-  border-radius: 6px;
-  padding: 4px;
-}
-.qr-label {
-  margin-top: 0.6rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--pulp);
-  font-weight: 600;
-}
-
-/* ── Premium iOS card (white text on dark) ── */
+/* ── Premium iOS card — theme-adaptive ── */
 .dl-card-premium {
-  border: 1.5px solid rgba(255, 255, 255, 0.45);
   padding: 1.6rem 1rem 1.4rem;
   text-align: center;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  background: #ffffff;
+  border: 2px solid var(--ink);
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s, transform 0.25s, box-shadow 0.3s;
+}
+.dl-card-premium:hover {
+  transform: translateY(-3px);
+  border-color: var(--graphite);
+}
+body.dark .dl-card-premium {
+  background: #2c2925;
+  border-color: rgba(255,255,255,0.25);
+}
+body.dark .dl-card-premium:hover {
+  border-color: rgba(255,255,255,0.6);
 }
 .dl-card-premium::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 2px;
+  right: 2px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.15), transparent);
 }
-.dl-card-premium:hover {
-  border-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+body.dark .dl-card-premium::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
 }
+
 .dl-card-premium .dl-platform {
-  color: #ffffff;
+  color: var(--ink);
   font-size: 1.25rem;
   font-weight: 600;
   display: inline-flex;
@@ -517,24 +485,29 @@ body.dark .dl-card:hover {
   margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
+body.dark .dl-card-premium .dl-platform { color: #ffffff; }
 .dl-card-premium .dl-platform svg { display: block; }
 
-/* "Coming Soon" — refined outlined pill */
+/* "Coming Soon" — adapts to theme */
 .dl-soon-premium {
   display: inline-block;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.6rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--ink);
   background: transparent;
   padding: 0.3rem 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--ink);
   margin-bottom: 1.1rem;
   font-weight: 500;
 }
+body.dark .dl-soon-premium {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.55);
+}
 
-/* Premium "Try on Web" button */
+/* Premium "Try on Web" button on white card → ink style */
 .dl-btn-premium {
   display: inline-flex;
   align-items: center;
@@ -544,29 +517,70 @@ body.dark .dl-card:hover {
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-decoration: none;
-  color: #ffffff;
-  background: transparent;
-  border: 1.5px solid #ffffff;
+  color: var(--pulp);
+  background: var(--ink);
+  border: 2px solid var(--ink);
   font-weight: 500;
-  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 .dl-btn-premium:hover {
-  background: #ffffff;
-  color: var(--ink);
+  background: #000;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
+}
+body.dark .dl-btn-premium {
+  color: var(--ink);
+  background: #ffffff;
+  border-color: #ffffff;
+}
+body.dark .dl-btn-premium:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .dl-btn-premium svg { transition: transform 0.2s; }
 .dl-btn-premium:hover svg { transform: translateX(3px); }
 
+/* Meta text adapts to theme */
+.dl-card .fine,
+.dl-card-premium .fine,
 .dl-meta {
   margin-top: 0.9rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.62rem;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.55);
   text-transform: uppercase;
+  color: var(--graphite);
 }
+body.dark .dl-card .fine,
+body.dark .dl-card-premium .fine,
+body.dark .dl-meta {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── QR card ── */
+.dl-card-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dl-card-qr canvas {
+  border: 3px solid var(--ink);
+  background: #fff;
+  display: block;
+  border-radius: 6px;
+  padding: 4px;
+}
+body.dark .dl-card-qr canvas { border-color: rgba(255,255,255,0.5); }
+.qr-label {
+  margin-top: 0.6rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--graphite);
+  font-weight: 600;
+}
+body.dark .dl-card-qr .qr-label { color: rgba(255,255,255,0.5); }
 
 /* ════════════════ SCREENSHOTS ════════════════ */
 .shots { padding: 3rem var(--pad) 2rem; border-top: 2px solid var(--ink); }
