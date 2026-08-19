@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>+one — an ink-and-paper messenger</title>
+  <meta name="description" content="+one is a real-time messenger and network: chats, stories, colleagues, polls, and a daily AI greeting. Built for iOS, Android, and web." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23f4ead8' width='32' height='32'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='18' font-family='Georgia' fill='%231a1a1a'%3E+%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Karla:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="paper" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="mark" href="#top">
+      <span class="mark-plus">+</span>one
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#network">Network</a>
+      <a href="#design">Design</a>
+    </nav>
+    <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Open the app</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="kicker">v1.2 · realtime · iOS / Android / web</p>
+      <h1>Find the <em>+ones</em><br />worth talking to.</h1>
+      <p class="lede">
+        An ink-and-paper messenger with live chats, a worldwide feed,
+        place-based colleagues, stories, polls, and a daily AI greeting.
+        No plastic glass UI — just graphite, pulp, and people.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Launch +one</a>
+        <a class="btn btn-ghost" href="https://github.com/sakshamfit/BROSKIE" target="_blank" rel="noopener">Source on GitHub</a>
+      </div>
+      <p class="fine">Production at broskie-h.up.railway.app · Expo + Node + Socket.IO</p>
+
+      <div class="phones">
+        <article class="device">
+          <header class="device-bar">
+            <span>Chats</span>
+            <span class="dot"></span>
+          </header>
+          <ul class="chat-list">
+            <li>
+              <div class="av av-y">S</div>
+              <div>
+                <strong>studio desk</strong>
+                <p>the poll just flipped — 4 to 3</p>
+              </div>
+              <time>now</time>
+            </li>
+            <li>
+              <div class="av av-c">A</div>
+              <div>
+                <strong>anika</strong>
+                <p>typing…</p>
+              </div>
+              <time>2m</time>
+            </li>
+            <li>
+              <div class="av av-i">+</div>
+              <div>
+                <strong>the network</strong>
+                <p>#campus · new photo post</p>
+              </div>
+              <time>11m</time>
+            </li>
+            <li>
+              <div class="av av-k">M</div>
+              <div>
+                <strong>maya</strong>
+                <p>✓✓ let’s find the +ones</p>
+              </div>
+              <time>1h</time>
+            </li>
+          </ul>
+        </article>
+
+        <article class="device device-shift">
+          <header class="device-bar">
+            <span>anika</span>
+            <span class="ticks">✓✓</span>
+          </header>
+          <div class="bubbles">
+            <p class="b them">did you see the weather greeting this morning</p>
+            <p class="b me">the character said it was 24° and I had 3 requests</p>
+            <p class="b them">okay that’s actually charming</p>
+            <p class="b me highlight">Let’s find the +ones.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="strip" id="features">
+      <h2>Built like a real messenger.<br />Drawn like a notebook.</h2>
+      <div class="grid">
+        <article>
+          <span class="tag">01</span>
+          <h3>Realtime, not almost</h3>
+          <p>Socket.IO delivery, typing, presence, unread badges, and blue ticks that catch up when someone reconnects.</p>
+        </article>
+        <article>
+          <span class="tag">02</span>
+          <h3>1:1 + groups</h3>
+          <p>Replies, reactions, edits, forwards, voice notes, images, disappearing timers, and delete-for-everyone.</p>
+        </article>
+        <article>
+          <span class="tag">03</span>
+          <h3>Message requests</h3>
+          <p>First notes from outside your contacts wait in Requests until you accept, delete, or block.</p>
+        </article>
+        <article>
+          <span class="tag">04</span>
+          <h3>Polls &amp; admin</h3>
+          <p>Group polls with live bars. Admins rename, promote, and remove — the last admin never vanishes.</p>
+        </article>
+        <article>
+          <span class="tag">05</span>
+          <h3>Stories</h3>
+          <p>Coloured text statuses, 24-hour expiry, viewed rings, tap-through progress. Paper, then gone.</p>
+        </article>
+        <article>
+          <span class="tag">06</span>
+          <h3>Voice &amp; video</h3>
+          <p>WebRTC calls on the web with ringing, mute, history. Native rings and history everywhere.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="split" id="network">
+      <div>
+        <p class="kicker">The Network</p>
+        <h2>A public worldwide feed that still feels handwritten.</h2>
+        <p>Post text, a cropped photo, and a tag. Likes and threaded comments land live. Filter by trending tags. Delete your own ink.</p>
+        <ul class="checks">
+          <li>Original, 1:1, 4:5, 16:9, 9:16 framing</li>
+          <li>Colleagues by college, org, or workplace</li>
+          <li>Accepted colleagues open a chat immediately</li>
+        </ul>
+      </div>
+      <aside class="card-feed">
+        <div class="tape">#campus</div>
+        <p class="feed-body">first week back. the courtyard still smells like rain and cheap coffee.</p>
+        <footer>
+          <span>♥ 48</span>
+          <span>12 comments</span>
+        </footer>
+      </aside>
+    </section>
+
+    <section class="ai">
+      <p class="kicker">Once a day</p>
+      <h2>A greeting that knows your name and the weather.</h2>
+      <p>After sign-in, a GLB character speaks — first name, real Open-Meteo conditions, request counts — then signs off with “Let’s find the +ones.”</p>
+    </section>
+
+    <section class="design" id="design">
+      <p class="kicker">Graphite &amp; Pulp</p>
+      <h2>No shadows. No blur. Depth from stroke.</h2>
+      <p>Hairline graphite → 2px ink → 3px bold. Underline inputs, dashed rules, masking-tape chips, highlighter yellow used like a real marker. Bricolage Grotesque / Karla / JetBrains Mono. Light, dark, system, and Kinetic Ink.</p>
+      <div class="swatches">
+        <span class="sw paper-s">pulp</span>
+        <span class="sw ink-s">ink</span>
+        <span class="sw hi-s">highlight</span>
+        <span class="sw cyan-s">kinetic</span>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready when you are.</h2>
+      <p>Create a username, open a second tab, and send something that actually arrives.</p>
+      <div class="hero-actions">
+        <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Open +one</a>
+        <a class="btn btn-ghost" href="https://github.com/sakshamfit/BROSKIE" target="_blank" rel="noopener">Read the repo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>+one</span>
+    <span>Not affiliated with WhatsApp. Built as an original messenger.</span>
+    <a href="https://github.com/sakshamfit/BROSKIE">sakshamfit/BROSKIE</a>
+  </footer>
+</body>
+</html>
