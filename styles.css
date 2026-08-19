@@ -133,6 +133,28 @@ body.dark .nav {
 .nav #site-nav > a:not(.btn) { border-bottom: 1px dashed transparent; transition: border-color 0.2s; }
 .nav #site-nav > a:not(.btn):hover { border-bottom-color: var(--ink); }
 
+/* ── Launch +one link (left side of nav, opposite Download) ── */
+.nav-launch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.nav-launch:hover {
+  background: var(--ink);
+  color: var(--pulp);
+  transform: translateY(-1px);
+}
+.nav-launch svg { display: block; }
+
 /* ── Theme toggle ── */
 .theme-toggle {
   background: var(--pulp);
@@ -456,6 +478,92 @@ body.dark .dl-card:hover {
   font-weight: 600;
 }
 
+/* ── Premium iOS card (white text on dark) ── */
+.dl-card-premium {
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  padding: 1.6rem 1rem 1.4rem;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.25s, box-shadow 0.3s;
+}
+.dl-card-premium::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+}
+.dl-card-premium:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+}
+.dl-card-premium .dl-platform {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+.dl-card-premium .dl-platform svg { display: block; }
+
+/* "Coming Soon" — refined outlined pill */
+.dl-soon-premium {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  margin-bottom: 1.1rem;
+  font-weight: 500;
+}
+
+/* Premium "Try on Web" button */
+.dl-btn-premium {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.4rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: #ffffff;
+  background: transparent;
+  border: 1.5px solid #ffffff;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.dl-btn-premium:hover {
+  background: #ffffff;
+  color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
+}
+.dl-btn-premium svg { transition: transform 0.2s; }
+.dl-btn-premium:hover svg { transform: translateX(3px); }
+
+.dl-meta {
+  margin-top: 0.9rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
 /* ════════════════ SCREENSHOTS ════════════════ */
 .shots { padding: 3rem var(--pad) 2rem; border-top: 2px solid var(--ink); }
 .shots h2 { margin-bottom: 1.5rem; }
@@ -676,6 +784,7 @@ body.dark .ai .kicker, body.dark .ai p { color: #d9c9a8; }
   body.dark .nav #site-nav > a { border-bottom-color: rgba(240,232,212,0.1); }
   .nav-cta { margin: 0.8rem var(--pad) 0; }
   .theme-toggle { margin: 0 var(--pad); }
+  .nav-launch { display: none; }
 
   .grid { grid-template-columns: 1fr; }
   .shot-row { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
