@@ -16,6 +16,10 @@
 
   <header class="nav">
     <a class="mark" href="#top"><span class="mark-plus">+</span>one</a>
+    <a class="nav-launch" href="https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk" download target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+      Download Android APK
+    </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -25,13 +29,18 @@
       <a href="#network">Network</a>
       <a href="#more">More</a>
       <a href="#design">Design</a>
-      <a class="btn btn-ink nav-cta" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Open the app</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a class="btn btn-ink nav-cta" href="https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk" download target="_blank" rel="noopener">↓&ensp;Download +one</a>
     </nav>
   </header>
 
   <main id="top">
+    <!-- ════════════════════ HERO ════════════════════ -->
     <section class="hero">
-      <div class="hero-copy">
+      <div class="hero-copy anim-reveal">
         <p class="kicker">v1.2 · realtime · iOS / Android / web</p>
         <h1>Find the <em>+ones</em> worth talking to.</h1>
         <p class="lede">
@@ -39,92 +48,102 @@
           stories, polls, WebRTC calls, and a daily AI greeting. Graphite, pulp, people.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Launch +one</a>
-          <a class="btn btn-ghost" href="https://github.com/sakshamfit/BROSKIE" target="_blank" rel="noopener">Source on GitHub</a>
+          <a class="btn btn-ink" href="https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk" download target="_blank" rel="noopener">↓&ensp;Download +one</a>
+          <a class="btn btn-ghost" href="https://plusoneeeee.vercel.app/" target="_blank" rel="noopener">Launch +one</a>
         </div>
-        <p class="fine">broskie-h.up.railway.app · Expo · Node · Socket.IO</p>
+        <p class="fine">plusoneeeee.vercel.app · Expo · Node · Socket.IO</p>
       </div>
-      <div class="hero-shot">
-        <img src="images/screen-chats.png" alt="Chats list in +one with paper graph background" width="720" height="1280" />
+      <div class="hero-phone anim-float">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <img src="images/screen-chats.png" alt="Chats list in +one with paper graph background" width="720" height="1280" />
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
       </div>
     </section>
 
+    <!-- ════════════════════ DOWNLOAD BANNER ════════════════════ -->
+    <section class="dl-banner" id="download">
+      <div class="dl-banner-inner anim-reveal">
+        <div class="dl-banner-text">
+          <p class="kicker">Get the app</p>
+          <h2>Download +one now.</h2>
+          <p class="lede">Pick your platform, or jump straight into the web app — same ink, same paper, same people.</p>
+        </div>
+        <div class="dl-banner-cards">
+          <div class="dl-card anim-reveal">
+            <span class="dl-platform">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341c-.572 0-1.043-.471-1.043-1.043s.471-1.043 1.043-1.043 1.043.471 1.043 1.043-.471 1.043-1.043 1.043m-11.046 0c-.572 0-1.043-.471-1.043-1.043s.471-1.043 1.043-1.043 1.043.471 1.043 1.043-.471 1.043-1.043 1.043m11.404-6.02l2.077-3.595a.416.416 0 0 0-.151-.567.416.416 0 0 0-.567.151l-2.105 3.642A13.06 13.06 0 0 0 12 8.018c-1.886 0-3.673.395-5.296 1.094L4.598 5.469a.416.416 0 0 0-.567-.151.416.416 0 0 0-.151.567l2.077 3.595C2.546 11.378.536 14.658 0 18.522h24c-.536-3.864-2.546-7.144-6.119-9.201"/></svg>
+              Android
+            </span>
+            <a class="dl-btn" href="https://github.com/sakshamfit/BROSKIE/releases/download/plusoneAndroid/plusone.apk" download target="_blank" rel="noopener">↓&ensp;Download APK</a>
+            <p class="fine">plusone.apk · GitHub Releases</p>
+          </div>
+          <div class="dl-card dl-card-premium anim-reveal">
+            <div class="dl-platform">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+              iOS
+            </div>
+            <span class="dl-soon-premium">Coming Soon</span>
+            <a class="dl-btn-premium" href="https://plusoneeeee.vercel.app/" target="_blank" rel="noopener">
+              Try on Web
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <p class="dl-meta">Safari · Add to Home Screen</p>
+          </div>
+          <div class="dl-card dl-card-qr anim-reveal">
+            <canvas id="qr-canvas" width="180" height="180"></canvas>
+            <p class="fine qr-label">Scan to try +one</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ SCREENSHOTS ════════════════════ -->
     <section class="shots" id="shots">
-      <p class="kicker">Inside the notebook</p>
-      <h2>The app, not a mock brand deck.</h2>
+      <p class="kicker anim-reveal">Inside the notebook</p>
+      <h2 class="anim-reveal">The app, not a mock brand deck.</h2>
       <div class="shot-row">
-        <figure>
-          <img src="images/screen-chat.png" alt="Conversation with highlighter yellow last message" width="720" height="1280" />
+        <figure class="anim-reveal">
+          <img src="images/screen-chat.png" alt="Conversation view" width="720" height="1280" />
           <figcaption>1:1 chat · ticks · replies</figcaption>
         </figure>
-        <figure>
+        <figure class="anim-reveal">
           <img src="images/screen-network.png" alt="The Network feed with a campus post" width="720" height="1280" />
           <figcaption>The Network · tags</figcaption>
         </figure>
-        <figure>
+        <figure class="anim-reveal">
           <img src="images/screen-call.png" alt="Incoming voice call screen" width="720" height="1280" />
           <figcaption>Calls · ring &amp; history</figcaption>
         </figure>
-        <figure>
+        <figure class="anim-reveal">
           <img src="images/screen-status.png" alt="Status story on mustard paper" width="720" height="1280" />
           <figcaption>Status · 24h ink</figcaption>
         </figure>
       </div>
     </section>
 
+    <!-- ════════════════════ FEATURES ════════════════════ -->
     <section class="strip" id="features">
-      <h2>Built like a real messenger.<br />Drawn like a notebook.</h2>
+      <h2 class="anim-reveal">Built like a real messenger.<br />Drawn like a notebook.</h2>
       <div class="grid">
-        <article>
-          <span class="tag">01</span>
-          <h3>Realtime, not almost</h3>
-          <p>Socket.IO delivery, typing, presence, unread badges, and blue ticks that catch up when someone reconnects.</p>
-        </article>
-        <article>
-          <span class="tag">02</span>
-          <h3>1:1 + groups</h3>
-          <p>Replies, reactions, edits, forwards, voice notes with waveforms, images with lightbox, and delete-for-everyone.</p>
-        </article>
-        <article>
-          <span class="tag">03</span>
-          <h3>Message requests</h3>
-          <p>First notes from outside your contacts wait in Requests until you accept, delete, or block.</p>
-        </article>
-        <article>
-          <span class="tag">04</span>
-          <h3>Disappearing ink</h3>
-          <p>Chat-wide or per-message timers: 30s, 5m, 1h, 24h. Expired messages are hard-deleted and vanish on every device.</p>
-        </article>
-        <article>
-          <span class="tag">05</span>
-          <h3>Polls &amp; admin</h3>
-          <p>Group polls with live bars. Admins rename, promote, and remove — the last admin never vanishes.</p>
-        </article>
-        <article>
-          <span class="tag">06</span>
-          <h3>Voice &amp; video</h3>
-          <p>WebRTC on the web: ring, accept, mute, hang up. Call history everywhere. Dedicated Calls tab to call back.</p>
-        </article>
-        <article>
-          <span class="tag">07</span>
-          <h3>Star, pin, search</h3>
-          <p>Pin chats to the top. Star any message. Global search plus in-chat search that jumps to the match. Archive and mute.</p>
-        </article>
-        <article>
-          <span class="tag">08</span>
-          <h3>Stories</h3>
-          <p>Coloured text statuses, 24-hour expiry, viewed rings, tap-through progress. Paper, then gone.</p>
-        </article>
-        <article>
-          <span class="tag">09</span>
-          <h3>One ID</h3>
-          <p>Username + password, JWT sessions, auto-login, editable about. Password-confirmed permanent deletion with safe cleanup.</p>
-        </article>
+        <article class="anim-reveal"><span class="tag">01</span><h3>Realtime, not almost</h3><p>Socket.IO delivery, typing, presence, unread badges, and blue ticks that catch up when someone reconnects.</p></article>
+        <article class="anim-reveal"><span class="tag">02</span><h3>1:1 + groups</h3><p>Replies, reactions, edits, forwards, voice notes with waveforms, images with lightbox, and delete-for-everyone.</p></article>
+        <article class="anim-reveal"><span class="tag">03</span><h3>Message requests</h3><p>First notes from outside your contacts wait in Requests until you accept, delete, or block.</p></article>
+        <article class="anim-reveal"><span class="tag">04</span><h3>Disappearing ink</h3><p>Chat-wide or per-message timers: 30s, 5m, 1h, 24h. Expired messages are hard-deleted and vanish on every device.</p></article>
+        <article class="anim-reveal"><span class="tag">05</span><h3>Polls &amp; admin</h3><p>Group polls with live bars. Admins rename, promote, and remove — the last admin never vanishes.</p></article>
+        <article class="animveal"><span class="tag">06</span><h3>Voice &amp; video</h3><p>WebRTC on the web: ring, accept, mute, hang up. Call history everywhere. Dedicated Calls tab to call back.</p></article>
+        <article class="anim-reveal"><span class="tag">07</span><h3>Star, pin, search</h3><p>Pin chats to the top. Star any message. Global search plus in-chat search that jumps to the match. Archive and mute.</p></article>
+        <article class="anim-reveal"><span class="tag">08</span><h3>Stories</h3><p>Coloured text statuses, 24-hour expiry, viewed rings, tap-through progress. Paper, then gone.</p></article>
+        <article class="anim-reveal"><span class="tag">09</span><h3>One ID</h3><p>Username + password, JWT sessions, auto-login, editable about. Password-confirmed permanent deletion with safe cleanup.</p></article>
       </div>
     </section>
 
+    <!-- ════════════════════ NETWORK ════════════════════ -->
     <section class="split" id="network">
-      <div>
+      <div class="anim-reveal">
         <p class="kicker">The Network</p>
         <h2>A worldwide feed that still feels handwritten.</h2>
         <p>Post text, a cropped photo, and a tag. Likes and threaded comments land live. Filter by trending tags. Delete your own ink.</p>
@@ -135,88 +154,70 @@
           <li>Cursor pagination, author delete, live join updates</li>
         </ul>
       </div>
-      <img class="split-img" src="images/screen-network.png" alt="Network feed screenshot" width="720" height="1280" />
+      <div class="anim-reveal">
+        <div class="phone-frame phone-frame-split">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <img src="images/screen-network.png" alt="Network feed screenshot" width="720" height="1280" />
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
+      </div>
     </section>
 
+    <!-- ════════════════════ AI ════════════════════ -->
     <section class="ai" id="ai">
-      <p class="kicker">Once a day</p>
-      <h2>A greeting that knows your name and the weather.</h2>
-      <p>After sign-in, a GLB character speaks — first name, real Open-Meteo conditions, unread and request counts — then signs off with “Let’s find the +ones.”</p>
+      <div class="anim-reveal">
+        <p class="kicker">Once a day</p>
+        <h2>A greeting that knows your name and the weather.</h2>
+        <p>After sign-in, a GLB character speaks — first name, real Open-Meteo conditions, unread and request counts — then signs off with "Let's find the +ones."</p>
+      </div>
     </section>
 
+    <!-- ════════════════════ MORE ════════════════════ -->
     <section class="strip" id="more">
-      <p class="kicker">And the rest of the notebook</p>
-      <h2>More of what shipped.</h2>
+      <p class="kicker anim-reveal">And the rest of the notebook</p>
+      <h2 class="anim-reveal">More of what shipped.</h2>
       <div class="grid">
-        <article>
-          <span class="tag">10</span>
-          <h3>100% SVG icons &amp; emoji</h3>
-          <p>Ionicons vectors and 1445 Twemoji. Same glyphs on iOS, Android, and web — no system emoji lottery.</p>
-        </article>
-        <article>
-          <span class="tag">11</span>
-          <h3>Installable PWA</h3>
-          <p>Add to home screen, standalone chrome, paper theme-color, notch-safe padding. Median Android status bar match.</p>
-        </article>
-        <article>
-          <span class="tag">12</span>
-          <h3>Four appearances</h3>
-          <p>Light, dark, system, and Kinetic Ink — high-contrast manga-tech with cyan actions and red alerts.</p>
-        </article>
-        <article>
-          <span class="tag">13</span>
-          <h3>Voice notes</h3>
-          <p>Real WebM / M4A recording with permission, upload, and a playable waveform bubble with duration.</p>
-        </article>
-        <article>
-          <span class="tag">14</span>
-          <h3>Privacy controls</h3>
-          <p>Block, mute, request inbox, status privacy, and a danger-zone Delete One ID that transfers shared groups first.</p>
-        </article>
-        <article>
-          <span class="tag">15</span>
-          <h3>Durable backend</h3>
-          <p>SQLite on a persistent volume, automatic backups every 6 hours and before shutdown. Only real sign-ups — no fake seed data.</p>
-        </article>
+        <article class="anim-reveal"><span class="tag">10</span><h3>100% SVG icons &amp; emoji</h3><p>Ionicons vectors and 1445 Twemoji. Same glyphs on iOS, Android, and web — no system emoji lottery.</p></article>
+        <article class="anim-reveal"><span class="tag">11</span><h3>Installable PWA</h3><p>Add to home screen, standalone chrome, paper theme-color, notch-safe padding. Median Android status bar match.</p></article>
+        <article class="anim-reveal"><span class="tag">12</span><h3>Four appearances</h3><p>Light, dark, system, and Kinetic Ink — high-contrast manga-tech with cyan actions and red alerts.</p></article>
+        <article class="anim-reveal"><span class="tag">13</span><h3>Voice notes</h3><p>Real WebM / M4A recording with permission, upload, and a playable waveform bubble with duration.</p></article>
+        <article class="anim-reveal"><span class="tag">14</span><h3>Privacy controls</h3><p>Block, mute, request inbox, status privacy, and a danger-zone Delete One ID that transfers shared groups first.</p></article>
+        <article class="anim-reveal"><span class="tag">15</span><h3>Durable backend</h3><p>SQLite on a persistent volume, automatic backups every 6 hours and before shutdown. Only real sign-ups — no fake seed data.</p></article>
       </div>
     </section>
 
+    <!-- ════════════════════ PLATFORMS ════════════════════ -->
     <section class="platforms">
-      <p class="kicker">Where it runs</p>
-      <h2>One codebase. Three surfaces.</h2>
+      <p class="kicker anim-reveal">Where it runs</p>
+      <h2 class="anim-reveal">One codebase. Three surfaces.</h2>
       <div class="plat-grid">
-        <article>
-          <h3>Web</h3>
-          <p>Full PWA with live WebRTC media. Open it in two tabs and watch ticks go blue.</p>
-        </article>
-        <article>
-          <h3>Android</h3>
-          <p>Expo Go in a minute, or a side-loaded APK from EAS. Same paper UI.</p>
-        </article>
-        <article>
-          <h3>iOS</h3>
-          <p>Expo Go now, TestFlight when you want a standalone build.</p>
-        </article>
+        <article class="anim-reveal"><h3>Web</h3><p>Full PWA with live WebRTC media. Open it in two tabs and watch ticks go blue.</p></article>
+        <article class="anim-reveal"><h3>Android</h3><p>Expo Go in a minute, or a side-loaded APK from EAS. Same paper UI.</p></article>
+        <article class="anim-reveal"><h3>iOS</h3><p>Expo Go now, TestFlight when you want a standalone build.</p></article>
       </div>
     </section>
 
+    <!-- ════════════════════ DESIGN ════════════════════ -->
     <section class="design" id="design">
-      <p class="kicker">Graphite &amp; Pulp</p>
-      <h2>No shadows. No blur. Depth from stroke.</h2>
-      <p>Hairline graphite → 2px ink → 3px bold. Underline inputs, dashed rules, masking-tape chips, highlighter yellow used like a real marker. Bricolage Grotesque / Karla / JetBrains Mono.</p>
-      <div class="swatches">
+      <p class="kicker anim-reveal">Graphite &amp; Pulp</p>
+      <h2 class="anim-reveal">No shadows. No blur. Depth from stroke.</h2>
+      <p class="anim-reveal">Hairline graphite → 2px ink → 3px bold. Underline inputs, dashed rules, masking-tape chips, hand-drawn markers for emphasis. Bricolage Grotesque / Karla / JetBrains Mono.</p>
+      <div class="swatches anim-reveal">
         <span class="sw paper-s">pulp</span>
         <span class="sw ink-s">ink</span>
-        <span class="sw hi-s">highlight</span>
+        <span class="sw underline-s">underline</span>
         <span class="sw cyan-s">kinetic</span>
       </div>
     </section>
 
+    <!-- ════════════════════ CTA ════════════════════ -->
     <section class="cta">
-      <h2>Ready when you are.</h2>
-      <p>Create a username, open a second tab, and send something that actually arrives.</p>
-      <div class="hero-actions">
-        <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Open +one</a>
+      <h2 class="anim-reveal">Ready when you are.</h2>
+      <p class="anim-reveal">Create a username, open a second tab, and send something that actually arrives.</p>
+      <div class="hero-actions anim-reveal">
+        <a class="btn btn-ink" href="https://plusoneeeee.vercel.app/" target="_blank" rel="noopener">Open +one</a>
         <a class="btn btn-ghost" href="https://github.com/sakshamfit/BROSKIE" target="_blank" rel="noopener">Read the repo</a>
       </div>
     </section>
@@ -228,7 +229,9 @@
     <a href="https://github.com/sakshamfit/BROSKIE">sakshamfit/BROSKIE</a>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
   <script>
+    /* ── Mobile nav ── */
     const btn = document.querySelector(".menu-btn");
     const nav = document.getElementById("site-nav");
     btn.addEventListener("click", () => {
@@ -242,6 +245,53 @@
         btn.setAttribute("aria-expanded", "false");
       });
     });
+
+    /* ── Dark mode toggle ── */
+    const themeBtn = document.querySelector(".theme-toggle");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+    function setTheme(dark) {
+      document.body.classList.toggle("dark", dark);
+      themeBtn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+      localStorage.setItem("+one-theme", dark ? "dark" : "light");
+    }
+    const saved = localStorage.getItem("+one-theme");
+    if (saved === "dark" || (!saved && prefersDark.matches)) setTheme(true);
+    themeBtn.addEventListener("click", () => setTheme(!document.body.classList.contains("dark")));
+
+    /* ── Scroll-reveal animation (IntersectionObserver) ── */
+    const reveals = document.querySelectorAll(".anim-reveal");
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("revealed");
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach((el) => revealObs.observe(el));
+
+    /* ── QR code for +one web app ── */
+    (function () {
+      var url = "https://plusoneeeee.vercel.app/";
+      var qr = qrcode(0, "M");
+      qr.addData(url);
+      qr.make();
+      var canvas = document.getElementById("qr-canvas");
+      if (!canvas) return;
+      var ctx = canvas.getContext("2d");
+      var size = qr.getModuleCount();
+      var cellSize = 180 / size;
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, 180, 180);
+      ctx.fillStyle = "#1c1914";
+      for (var r = 0; r < size; r++) {
+        for (var c = 0; c < size; c++) {
+          if (qr.isDark(r, c)) {
+            ctx.fillRect(c * cellSize, r * cellSize, cellSize + 0.5, cellSize + 0.5);
+          }
+        }
+      }
+    })();
   </script>
 </body>
 </html>
