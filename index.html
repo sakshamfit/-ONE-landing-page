@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Karla:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 </head>
 <body>
   <div class="paper" aria-hidden="true"></div>
@@ -40,13 +41,24 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-ink" href="https://broskie-h.up.railway.app" target="_blank" rel="noopener">Launch +one</a>
-          <a class="btn btn-ghost" href="https://github.com/sakshamfit/BROSKIE" target="_blank" rel="noopener">Source on GitHub</a>
+          <a class="btn btn-ghost apk-download" href="https://github.com/sakshamfit/BROSKIE/releases/download/newrelease/application-59e4e7db-d333-4450-8ced-27726930facc.apk" target="_blank" rel="noopener">Download APK</a>
         </div>
         <p class="fine">broskie-h.up.railway.app · Expo · Node · Socket.IO</p>
       </div>
       <div class="hero-shot">
         <img src="images/screen-chats.png" alt="Chats list in +one with paper graph background" width="720" height="1280" />
       </div>
+      <aside class="qr-card" aria-label="Scan to install +one on Android">
+        <div class="qr-card-inner">
+          <p class="kicker qr-kicker">Android · v1.2</p>
+          <h3 class="qr-title">Scan to install</h3>
+          <div class="qr-frame" id="qr-frame" aria-hidden="false">
+            <div id="qr-code" class="qr-svg" role="img" aria-label="QR code linking to the +one Android APK"></div>
+          </div>
+          <p class="qr-caption">Point your phone camera at the code to grab the APK.</p>
+          <a class="btn btn-ink apk-download qr-fallback" href="https://github.com/sakshamfit/BROSKIE/releases/download/newrelease/application-59e4e7db-d333-4450-8ced-27726930facc.apk" target="_blank" rel="noopener">Download APK</a>
+        </div>
+      </aside>
     </section>
 
     <section class="shots" id="shots">
@@ -243,6 +255,34 @@
         btn.setAttribute("aria-expanded", "false");
       });
     });
+
+    // QR code for the Android APK
+    (function renderQr() {
+      const target = document.getElementById("qr-code");
+      if (!target || typeof qrcode !== "function") return;
+      const apkUrl = "https://github.com/sakshamfit/BROSKIE/releases/download/newrelease/application-59e4e7db-d333-4450-8ced-27726930facc.apk";
+      // type 0 = auto-detect smallest size that fits the payload
+      const qr = qrcode(0, "M");
+      qr.addData(apkUrl);
+      qr.make();
+      const cellSize = 6;
+      const margin = 2;
+      const count = qr.getModuleCount();
+      const size = (count + margin * 2) * cellSize;
+      let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}" width="100%" height="100%" shape-rendering="crispEdges" role="img" aria-label="QR code for the +one Android APK">`;
+      svg += `<rect width="100%" height="100%" fill="#f4ead8"/>`;
+      for (let r = 0; r < count; r++) {
+        for (let c = 0; c < count; c++) {
+          if (qr.isDark(r, c)) {
+            const x = (c + margin) * cellSize;
+            const y = (r + margin) * cellSize;
+            svg += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" fill="#1a1a1a"/>`;
+          }
+        }
+      }
+      svg += `</svg>`;
+      target.innerHTML = svg;
+    })();
   </script>
 </body>
 </html>
